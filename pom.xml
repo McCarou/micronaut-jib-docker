@@ -76,6 +76,11 @@
       <artifactId>micronaut-runtime</artifactId>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.cloud.tools</groupId>
+      <artifactId>jib-maven-plugin</artifactId>
+      <version>3.0.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -100,6 +105,18 @@
           </compilerArgs>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <to>
+            <image>docker.io/qwertiq/${artifactId}</image>
+          </to>
+        </configuration>
+      </plugin>
+
     </plugins>
   </build>
 
